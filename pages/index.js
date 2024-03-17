@@ -14,7 +14,7 @@ export default function Page(props) {
 			</Head>
 
 			<div className="base">
-				<Home />
+				<Home setLoading={props.setLoading} />
 			</div>
 		</>
 	);

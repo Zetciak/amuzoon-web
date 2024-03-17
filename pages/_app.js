@@ -1,6 +1,6 @@
 // >> Modules
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // >> Aos
 import Aos from 'aos';
@@ -13,6 +13,9 @@ import '@/styles/globals.scss';
 
 // >> Script
 function MyApp({ Component, pageProps }) {
+	// >> Variables
+	const [loading, setLoading] = useState(true);
+
 	useEffect(() => {
 		Aos.init({ duration: 700, once: true });
 	}, []);
@@ -22,7 +25,14 @@ function MyApp({ Component, pageProps }) {
 		<StyledEngineProvider injectFirst>
 			<CssBaseline />
 
-			<Component {...pageProps} />
+			<Component {...pageProps} setLoading={setLoading} />
+
+			<div className="pageLoader" data-visible={loading}>
+				<div className="grass1" data-visible={loading}></div>
+				<div className="grass1_1" data-visible={loading}></div>
+				<div className="grass2" data-visible={loading}></div>
+				<div className="grass2_1" data-visible={loading}></div>
+			</div>
 		</StyledEngineProvider>
 	);
 }

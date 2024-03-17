@@ -43,6 +43,9 @@ export default function Hero(props) {
 							quality={99}
 							priority={true}
 							className="image"
+							onLoad={() => {
+								props.setLoading(false);
+							}}
 						/>
 					</div>
 				</div>
