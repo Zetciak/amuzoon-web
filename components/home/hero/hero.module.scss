@@ -24,7 +24,7 @@
 .inside .left .leftBanana {
 	position: absolute;
 	left: -160px;
-	bottom: -40px;
+	top: calc(100% - 80px);
 
 	width: 343px;
 	height: auto;
@@ -146,5 +146,90 @@
 }
 
 // RWD
-@media (max-width: 700px) {
+@media (max-width: 1150px) {
+	.inside {
+		flex-wrap: wrap;
+	}
+
+	.inside .left {
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	.inside .left .title {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.inside .left .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+	}
+
+	.inside .desc {
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 16px;
+	}
+
+	.inside .buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	.inside .right {
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.section {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 630px) {
+	.inside .left .leftBanana {
+		top: 0px;
+		transform: rotate(120deg);
+	}
+
+	.inside .right .rightBanana {
+		top: auto;
+		bottom: -50px;
+		transform: rotate(-30deg);
+	}
+}
+
+@media (max-width: 470px) {
+	.inside .left .leftBanana {
+		display: none;
+	}
+
+	.inside .left .title {
+		font-size: 43px;
+	}
+
+	.inside .left .title::before {
+		font-size: 43px;
+	}
+
+	.inside .desc {
+		font-size: 18px;
+	}
+
+	.inside .right {
+		margin-top: 24px;
+	}
+
+	.section .heroBg {
+		height: 200px;
+		margin-top: 0px;
+	}
+
+	.section .heroBg .heroBgInside {
+		height: 300px;
+	}
 }

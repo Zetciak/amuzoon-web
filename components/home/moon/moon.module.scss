@@ -79,5 +79,28 @@
 }
 
 // RWD
-@media (max-width: 700px) {
+@media (max-width: 850px) {
+	.inside {
+		flex-wrap: wrap;
+	}
+
+	.inside .left {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.inside .left .title {
+		margin: 0 auto;
+		text-align: center;
+
+		font-size: 42px;
+	}
+
+	.inside .left .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+
+		font-size: 42px;
+	}
 }

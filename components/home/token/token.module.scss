@@ -118,5 +118,67 @@
 }
 
 // RWD
-@media (max-width: 700px) {
+@media (max-width: 1230px) {
+	.inside .coin1 {
+		left: calc(30px - 100px);
+	}
+
+	.inside .coin2 {
+		right: calc(140px - 100px);
+	}
+
+	.inside .coin3 {
+		right: calc(-20px - 30px);
+	}
+}
+
+@media (max-width: 1000px) {
+	.inside .coin1 {
+		top: auto;
+		bottom: -250px;
+		left: calc(30px - 100px);
+	}
+
+	.inside .coin2 {
+		top: auto;
+		bottom: -100px;
+		right: calc(140px - 100px);
+	}
+
+	.inside .coin3 {
+		top: auto;
+		bottom: -250px;
+		right: calc(-20px - 30px);
+	}
+}
+
+@media (max-width: 800px) {
+	.section {
+		margin-top: 20px;
+	}
+
+	.inside .title {
+		font-size: 42px;
+	}
+
+	.inside .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+
+		font-size: 42px;
+	}
+}
+
+@media (max-width: 530px) {
+	.inside .desc {
+		margin-top: 50px;
+		font-size: 20px;
+	}
+
+	.inside .desc::before {
+		left: 50%;
+		top: calc(50% - 40px);
+		translate: -50% -50%;
+	}
 }
