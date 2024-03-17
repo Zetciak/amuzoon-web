@@ -14,14 +14,14 @@ body {
 
 body {
 	background: $color-background-primary;
-	overflow-x: hidden;
-	overflow-x: clip;
 }
 
 .base {
 	background: $color-background-primary;
 	color: $color-text-primary;
 	font-family: $font-signika;
+
+	overflow: clip;
 
 	min-width: 100vw;
 }
