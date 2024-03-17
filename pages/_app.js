@@ -15,10 +15,15 @@ import '@/styles/globals.scss';
 function MyApp({ Component, pageProps }) {
 	// >> Variables
 	const [loading, setLoading] = useState(true);
+	const [loaded, setLoaded] = useState(true);
 
 	useEffect(() => {
 		Aos.init({ duration: 700, once: true });
 	}, []);
+
+	useEffect(() => {
+		setLoaded(loading);
+	}, [loading]);
 
 	// >> Render
 	return (
@@ -27,11 +32,11 @@ function MyApp({ Component, pageProps }) {
 
 			<Component {...pageProps} setLoading={setLoading} />
 
-			<div className="pageLoader" data-visible={loading}>
-				<div className="grass1" data-visible={loading}></div>
-				<div className="grass1_1" data-visible={loading}></div>
-				<div className="grass2" data-visible={loading}></div>
-				<div className="grass2_1" data-visible={loading}></div>
+			<div className="pageLoader" data-visible={loaded}>
+				<div className="grass1" data-visible={loaded}></div>
+				<div className="grass1_1" data-visible={loaded}></div>
+				<div className="grass2" data-visible={loaded}></div>
+				<div className="grass2_1" data-visible={loaded}></div>
 			</div>
 		</StyledEngineProvider>
 	);
